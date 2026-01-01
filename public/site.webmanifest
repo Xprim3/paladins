@@ -1,0 +1,23 @@
+{
+  "name": "Blood Paladins",
+  "short_name": "Blood Paladins",
+  "description": "Join the strongest family alliance in Rise of Kingdoms",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#8B0000",
+  "background_color": "#1a1a1a",
+  "display": "standalone",
+  "start_url": "/",
+  "orientation": "portrait-primary"
+}
+

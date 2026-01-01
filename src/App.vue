@@ -10,6 +10,7 @@
     <JoinSection />
     <FooterSection />
     <ScrollToTop />
+    <StructuredData />
   </div>
 </template>
 
@@ -25,12 +26,16 @@ import KingdomSection from '@/components/sections/KingdomSection.vue'
 import JoinSection from '@/components/sections/JoinSection.vue'
 import FooterSection from '@/components/sections/FooterSection.vue'
 import ScrollToTop from '@/components/ui/ScrollToTop.vue'
+import StructuredData from '@/components/ui/StructuredData.vue'
 import { useI18n } from '@/composables/useI18n'
+import { useSEO } from '@/composables/useSEO'
 
 const { initLanguage } = useI18n()
+const { updateSEO } = useSEO()
 
 onMounted(() => {
   initLanguage()
+  updateSEO()
 })
 </script>
 

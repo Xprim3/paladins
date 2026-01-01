@@ -1,0 +1,10 @@
+# robots.txt for Blood Paladins
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://bloodpaladins.com/sitemap.xml
+
+# Crawl-delay (optional, adjust as needed)
+Crawl-delay: 1
+

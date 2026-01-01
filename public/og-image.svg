@@ -1,0 +1,47 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2a1a1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a1a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#DC143C;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Decorative Elements -->
+  <circle cx="200" cy="150" r="100" fill="#8B0000" opacity="0.2" filter="url(#glow)"/>
+  <circle cx="1000" cy="480" r="120" fill="#FFD700" opacity="0.15" filter="url(#glow)"/>
+  
+  <!-- Main Title -->
+  <text x="600" y="280" font-family="Cinzel, serif" font-size="72" font-weight="700" text-anchor="middle" fill="url(#textGradient)" filter="url(#glow)">
+    Blood Paladins
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="340" font-family="Inter, sans-serif" font-size="32" font-weight="600" text-anchor="middle" fill="#FFD700" opacity="0.9">
+    The Strongest Family in Rise of Kingdoms
+  </text>
+  
+  <!-- Tagline -->
+  <text x="600" y="400" font-family="Inter, sans-serif" font-size="24" font-weight="400" text-anchor="middle" fill="#FFFFFF" opacity="0.8">
+    Honor • Loyalty • Excellence
+  </text>
+  
+  <!-- Decorative Border -->
+  <rect x="50" y="50" width="1100" height="530" fill="none" stroke="#FFD700" stroke-width="3" opacity="0.5" rx="10"/>
+</svg>
+
