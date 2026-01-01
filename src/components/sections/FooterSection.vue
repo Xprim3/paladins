@@ -120,7 +120,7 @@
           <div class="space-y-3 sm:space-y-4">
             <!-- Discord -->
             <a
-              href="#"
+              href="https://discord.gg/VbHvTfWJc5"
               target="_blank"
               rel="noopener noreferrer"
               class="flex items-center justify-center md:justify-start gap-3 text-sm sm:text-base text-text-muted hover:text-paladin-gold transition-colors duration-300 group"
@@ -142,7 +142,7 @@
             </a>
             <!-- Telegram -->
             <a
-              href="#"
+              href="https://t.me/+Wlska4g_xjE4ZjVi"
               target="_blank"
               rel="noopener noreferrer"
               class="flex items-center justify-center md:justify-start gap-3 text-sm sm:text-base text-text-muted hover:text-paladin-gold transition-colors duration-300 group"

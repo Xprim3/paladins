@@ -418,8 +418,9 @@
             </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 pt-4">
               <a
-                href="#"
+                href="https://discord.gg/VbHvTfWJc5"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="group relative inline-flex items-center justify-center w-full sm:w-auto px-8 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6 bg-gradient-to-r from-blood-red to-blood-red-dark text-white font-bold rounded-xl text-base sm:text-lg md:text-xl overflow-hidden shadow-2xl shadow-blood-red/50 hover:shadow-blood-red/70 transition-all duration-300"
               >
                 <svg
@@ -437,8 +438,9 @@
                 ></div>
               </a>
               <a
-                href="#"
+                href="https://t.me/+Wlska4g_xjE4ZjVi"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="group relative inline-flex items-center justify-center w-full sm:w-auto px-8 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6 bg-dark-surface/80 backdrop-blur-md border-2 border-paladin-gold text-paladin-gold font-bold rounded-xl text-base sm:text-lg md:text-xl hover:bg-paladin-gold hover:text-dark-bg shadow-2xl shadow-paladin-gold/30 hover:shadow-paladin-gold/50 transition-all duration-300"
               >
                 <svg
