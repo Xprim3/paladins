@@ -53,7 +53,7 @@
           class="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-blood-red mb-4 drop-shadow-2xl"
           style="text-shadow: 0 0 60px rgba(220, 20, 60, 0.5)"
         >
-          The Blood Paladins Legacy
+          {{ t('about.title') }}
         </h2>
         <div
           class="w-24 h-1 bg-gradient-to-r from-transparent via-paladin-gold to-transparent mx-auto"
@@ -89,22 +89,15 @@
                   class="text-paladin-gold font-semibold text-lg sm:text-xl md:text-2xl"
                   >LundiX</span
                 >
-                are not just leaders. They are visionaries who saw beyond the
-                chaos of war and the pursuit of power. In a realm where
-                alliances crumble and leaders fall to greed, they chose a
-                different path one paved with honor, loyalty, and an unbreakable
-                bond that runs deeper than blood.
+                {{ t('about.legacy.p1') }}
               </p>
 
               <p
                 class="text-base sm:text-lg md:text-xl text-text-muted leading-relaxed text-center"
               >
-                Their dream was simple yet profound: to build a
-                <span class="text-paladin-gold font-semibold">family</span>. Not
-                an organization. Not a hierarchy. A true family where every
-                member stands shoulder to shoulder, where honor is not just a
-                word but a way of life, and where loyalty means you would lay
-                down your life for your brother or sister without hesitation.
+                {{ t('about.legacy.p2') }}
+                <span class="text-paladin-gold font-semibold">{{ t('about.legacy.p2.family') }}</span>
+                {{ t('about.legacy.p2.rest') }}
               </p>
 
               <div
@@ -113,41 +106,29 @@
                 <p
                   class="text-lg sm:text-xl md:text-2xl text-paladin-gold font-semibold leading-relaxed italic mb-3"
                 >
-                  "In Blood Paladins, we don't just fight together. We die for
-                  each other."
+                  "{{ t('about.legacy.quote') }}"
                 </p>
                 <p class="text-sm sm:text-base text-text-muted">
-                  — Pryda & LundiX
+                  {{ t('about.legacy.quote.by') }}
                 </p>
               </div>
 
               <p
                 class="text-base sm:text-lg md:text-xl text-text-muted leading-relaxed text-center"
               >
-                This is not empty rhetoric. This is the foundation upon which
-                Blood Paladins stands.
+                {{ t('about.legacy.p3') }}
                 <span class="text-blood-red font-semibold">Pryda</span> and
-                <span class="text-paladin-gold font-semibold">LundiX</span> lead
-                by example, showing that true strength comes not from commanding
-                others, but from being willing to sacrifice everything for those
-                you call family. Together with their trusted key members
+                <span class="text-paladin-gold font-semibold">LundiX</span>
+                {{ t('about.legacy.p3.lead') }}
                 <span class="text-text-light font-semibold"
-                  >Aetherius, Valorius, Sanguis, Crimson, Aurelius, and Ignis </span
-                >they have created a place where honor is earned through
-                actions, not words—where loyalty is proven in the heat of
-                battle, and where every member knows that their leaders would
-                stand between them and danger without a second thought.
+                  >{{ t('about.legacy.p3.members') }} </span
+                >{{ t('about.legacy.p3.end') }}
               </p>
 
               <p
                 class="text-base sm:text-lg md:text-xl text-text-muted leading-relaxed text-center"
               >
-                Under their guidance, Blood Paladins has become more than an
-                alliance. It has become a brotherhood and sisterhood bound by
-                unbreakable vows. Here, you will find warriors who will shield
-                you with their own bodies, strategists who will share their
-                knowledge without reservation, and leaders who will fight for
-                your growth as fiercely as they fight for their own.
+                {{ t('about.legacy.p4') }}
               </p>
 
               <div
@@ -158,17 +139,14 @@
                 >
                   <span class="text-blood-red font-semibold">Pryda</span>,
                   <span class="text-paladin-gold font-semibold">LundiX</span>,
-                  and their dedicated team have built something rare in this
-                  kingdom a place where honor is the currency, loyalty is the
-                  bond, and sacrifice is the ultimate expression of love for
-                  your family.
+                  {{ t('about.legacy.p5') }}
                 </p>
                 <p
                   class="text-xl sm:text-2xl md:text-3xl text-paladin-gold font-bold text-center leading-relaxed"
                   style="text-shadow: 0 0 20px rgba(255, 215, 0, 0.4)"
                 >
                   <br />
-                  This is their legacy. This is Blood Paladins.
+                  {{ t('about.legacy.p6') }}
                 </p>
               </div>
             </div>
@@ -185,7 +163,7 @@
             text-shadow: 0 0 40px rgba(255, 215, 0, 0.4);
           "
         >
-          Our Leaders
+          {{ t('about.leaders.title') }}
         </h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">
           <!-- Leader: Pryda -->
@@ -216,20 +194,18 @@
                   </svg>
                 </div>
                 <h4 class="text-2xl sm:text-3xl font-bold text-blood-red mb-2">
-                  Pryda
+                  {{ t('about.leaders.pryda.name') }}
                 </h4>
                 <p
                   class="text-paladin-gold font-semibold text-lg sm:text-xl mb-4"
                 >
-                  Leader
+                  {{ t('about.leaders.pryda.role') }}
                 </p>
               </div>
               <p
                 class="text-text-muted text-sm sm:text-base leading-relaxed text-center"
               >
-                A visionary strategist and unwavering commander, Pryda leads
-                with wisdom and determination, guiding the family toward
-                greatness with every decision.
+                {{ t('about.leaders.pryda.desc') }}
               </p>
             </div>
           </div>
@@ -264,18 +240,16 @@
                 <h4
                   class="text-2xl sm:text-3xl font-bold text-paladin-gold mb-2"
                 >
-                  LundiX
+                  {{ t('about.leaders.lundix.name') }}
                 </h4>
                 <p class="text-blood-red font-semibold text-lg sm:text-xl mb-4">
-                  Co-Leader
+                  {{ t('about.leaders.lundix.role') }}
                 </p>
               </div>
               <p
                 class="text-text-muted text-sm sm:text-base leading-relaxed text-center"
               >
-                A master tactician and trusted advisor, LundiX brings balance
-                and strength to the leadership, ensuring every member thrives
-                under their guidance.
+                {{ t('about.leaders.lundix.desc') }}
               </p>
             </div>
           </div>
@@ -291,7 +265,7 @@
             text-shadow: 0 0 40px rgba(255, 215, 0, 0.4);
           "
         >
-          Key Members
+          {{ t('about.members.title') }}
         </h3>
         <div
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
@@ -346,39 +320,30 @@
               class="text-3xl sm:text-4xl md:text-5xl font-bold text-paladin-gold mb-6 sm:mb-8 text-center"
               style="text-shadow: 0 0 40px rgba(255, 215, 0, 0.5)"
             >
-              Our Vision
+              {{ t('about.vision.title') }}
             </h3>
             <div class="space-y-6 sm:space-y-8">
               <p
                 class="text-lg sm:text-xl md:text-2xl text-text-light leading-relaxed text-center italic"
               >
-                "In a world where warriors fall forgotten and alliances crumble
-                to dust, we dream of something
-                <span class="text-paladin-gold font-bold">eternal</span>."
+                "{{ t('about.vision.quote') }}
+                <span class="text-paladin-gold font-bold">{{ t('about.vision.quote.eternal') }}</span>{{ t('about.vision.quote.end') }}"
               </p>
 
               <p
                 class="text-base sm:text-lg md:text-xl text-text-muted leading-relaxed text-center"
               >
-                We envision a kingdom where the lonely find their family, where
-                the broken find healing, and where the lost find their way home.
-                A place where a new member's first day is met with open arms and
-                genuine care, where their struggles become our struggles, and
-                where their tears are met with understanding, not judgment.
+                {{ t('about.vision.p1') }}
               </p>
 
               <p
                 class="text-base sm:text-lg md:text-xl text-text-muted leading-relaxed text-center"
               >
-                We see a future where Blood Paladins is not just remembered for
-                battles won, but for
+                {{ t('about.vision.p2') }}
                 <span class="text-paladin-gold font-semibold"
-                  >lives changed</span
-                >. Where a warrior who once felt worthless discovers their
-                value. Where someone who never had a voice finds they matter.
-                Where those who have been abandoned by others find they are
-                finally, truly,
-                <span class="text-blood-red font-semibold">loved</span>.
+                  >{{ t('about.vision.p2.lives') }}</span
+                >{{ t('about.vision.p2.rest') }}
+                <span class="text-blood-red font-semibold">{{ t('about.vision.p2.loved') }}</span>{{ t('about.vision.p2.end') }}
               </p>
 
               <div
@@ -387,9 +352,7 @@
                 <p
                   class="text-lg sm:text-xl md:text-2xl text-paladin-gold font-semibold leading-relaxed"
                 >
-                  Our vision is simple: to be the family you've been searching
-                  for, the home you've been dreaming of, the bond that will
-                  never break.
+                  {{ t('about.vision.p3') }}
                 </p>
               </div>
             </div>
@@ -405,51 +368,39 @@
               class="text-3xl sm:text-4xl md:text-5xl font-bold text-blood-red mb-6 sm:mb-8 text-center"
               style="text-shadow: 0 0 40px rgba(220, 20, 60, 0.5)"
             >
-              Our Mission
+              {{ t('about.mission.title') }}
             </h3>
             <div class="space-y-6 sm:space-y-8">
               <p
                 class="text-lg sm:text-xl md:text-2xl text-text-light leading-relaxed text-center"
               >
-                To stand as a shield for those who have none. To be the voice
-                for those who have been silenced. To be the
-                <span class="text-blood-red font-bold">family</span> for those
-                who have been abandoned.
+                {{ t('about.mission.p1') }}
+                <span class="text-blood-red font-bold">{{ t('about.mission.p1.family') }}</span>
+                {{ t('about.mission.p1.end') }}
               </p>
 
               <p
                 class="text-base sm:text-lg md:text-xl text-text-muted leading-relaxed text-center"
               >
-                When you join Blood Paladins, you are not joining an
-                organization. You are coming home. You are finding the brothers
-                and sisters you never knew you had. You are discovering that in
-                this cold, unforgiving kingdom, there is a place where you
-                matter where your pain is our pain, where your joy is our joy,
-                where your dreams become our shared purpose.
+                {{ t('about.mission.p2') }}
               </p>
 
               <p
                 class="text-base sm:text-lg md:text-xl text-text-muted leading-relaxed text-center"
               >
-                Our mission is to look into the eyes of every member and say,
-                with absolute certainty:
+                {{ t('about.mission.p3') }}
                 <span class="text-paladin-gold font-semibold italic"
-                  >"You are not alone. You never will be again."</span
+                  >"{{ t('about.mission.p3.quote') }}"</span
                 >
-                We will fight for you when you cannot fight for yourself. We
-                will stand with you when the world stands against you. We will
-                bleed for you, we will sacrifice for you, we will
-                <span class="text-blood-red font-bold">die for you</span>because
-                that is what family does.
+                {{ t('about.mission.p3.rest') }}
+                <span class="text-blood-red font-bold">{{ t('about.mission.p3.die') }}</span>
+                {{ t('about.mission.p3.end') }}
               </p>
 
               <p
                 class="text-base sm:text-lg md:text-xl text-text-muted leading-relaxed text-center"
               >
-                This is not about power. This is not about glory. This is about
-                the warrior who joined us broken and left whole. The member who
-                came to us lost and found their purpose. The person who thought
-                they were worthless and discovered they were irreplaceable.
+                {{ t('about.mission.p4') }}
               </p>
 
               <div
@@ -459,13 +410,13 @@
                   class="text-xl sm:text-2xl md:text-3xl text-blood-red font-bold text-center leading-relaxed mb-4"
                   style="text-shadow: 0 0 30px rgba(220, 20, 60, 0.4)"
                 >
-                  We will build a legacy not of conquest, but of connection.
+                  {{ t('about.mission.p5') }}
                 </p>
                 <p
                   class="text-xl sm:text-2xl md:text-3xl text-paladin-gold font-bold text-center leading-relaxed"
                   style="text-shadow: 0 0 30px rgba(255, 215, 0, 0.4)"
                 >
-                  Not of power, but of love. Not of victory, but of family.
+                  {{ t('about.mission.p6') }}
                 </p>
               </div>
             </div>
@@ -492,16 +443,19 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from "vue";
+import { onMounted, computed } from "vue";
+import { useI18n } from "@/composables/useI18n";
 
-const keyPeople = [
-  { name: "Aetherius", role: "Strategic Commander" },
-  { name: "Valorius", role: "Battle Coordinator" },
-  { name: "Sanguis", role: "Alliance Advisor" },
-  { name: "Crimson", role: "Tactical Specialist" },
-  { name: "Aurelius", role: "Recruitment Officer" },
-  { name: "Ignis", role: "Training Master" },
-];
+const { t } = useI18n();
+
+const keyPeople = computed(() => [
+  { name: "Aetherius", role: t.value('about.members.aetherius.role') },
+  { name: "Valorius", role: t.value('about.members.valorius.role') },
+  { name: "Sanguis", role: t.value('about.members.sanguis.role') },
+  { name: "Crimson", role: t.value('about.members.crimson.role') },
+  { name: "Aurelius", role: t.value('about.members.aurelius.role') },
+  { name: "Ignis", role: t.value('about.members.ignis.role') },
+]);
 
 onMounted(() => {
   // Add 3D parallax effect on mouse move

@@ -14,6 +14,7 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted } from 'vue'
 import Header from '@/components/ui/Header.vue'
 import HeroSection from '@/components/sections/HeroSection.vue'
 import AboutSection from '@/components/sections/AboutSection.vue'
@@ -24,5 +25,12 @@ import KingdomSection from '@/components/sections/KingdomSection.vue'
 import JoinSection from '@/components/sections/JoinSection.vue'
 import FooterSection from '@/components/sections/FooterSection.vue'
 import ScrollToTop from '@/components/ui/ScrollToTop.vue'
+import { useI18n } from '@/composables/useI18n'
+
+const { initLanguage } = useI18n()
+
+onMounted(() => {
+  initLanguage()
+})
 </script>
 

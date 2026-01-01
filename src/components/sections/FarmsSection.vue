@@ -23,7 +23,7 @@
           class="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-blood-red mb-4 drop-shadow-2xl"
           style="text-shadow: 0 0 60px rgba(220, 20, 60, 0.5)"
         >
-          Farm Alliances
+          {{ t('farms.title') }}
         </h2>
         <div class="w-24 h-1 bg-gradient-to-r from-transparent via-blood-red to-transparent mx-auto"></div>
       </div>
@@ -36,25 +36,19 @@
           <p
             class="text-base sm:text-lg md:text-xl text-text-light leading-relaxed text-center mb-4"
           >
-            Our <span class="text-blood-red font-semibold">Farm Alliances</span> are the backbone of our family's 
-            resource network. These alliances provide essential support to the main alliance through strategic 
-            resource gathering and positioning.
+            {{ t('farms.description.p1') }} <span class="text-blood-red font-semibold">{{ t('farms.description.p1.farms') }}</span> {{ t('farms.description.p1.end') }}
           </p>
           <p
             class="text-sm sm:text-base md:text-lg text-text-muted leading-relaxed text-center"
           >
-            Every member of Blood Paladins can send their farms to one of our farm alliances. This allows for 
-            organized resource management, strategic positioning, and ensures that our main alliance members 
-            can focus on battles and events while farms are safely managed and productive.
+            {{ t('farms.description.p2') }}
           </p>
           <p
             class="text-sm sm:text-base md:text-lg text-text-muted leading-relaxed text-center mt-4"
           >
-            Beyond resource gathering, our farm alliances serve a crucial strategic role as 
-            <span class="text-blood-red font-semibold">CF Bombs</span> during 
-            <span class="text-paladin-gold font-semibold">KVK (Kingdom vs Kingdom)</span> events and other major operations. 
-            These farms provide essential tactical support, strategic positioning, and operational flexibility 
-            when the family needs them most.
+            {{ t('farms.description.p3') }}
+            <span class="text-blood-red font-semibold">{{ t('farms.description.p3.cf') }}</span> {{ t('farms.description.p3.during') }}
+            <span class="text-paladin-gold font-semibold">{{ t('farms.description.p3.kvk') }}</span> {{ t('farms.description.p3.end') }}
           </p>
         </div>
       </div>
@@ -101,13 +95,13 @@
 
               <div class="space-y-3">
                 <div>
-                  <h4 class="text-sm sm:text-base font-bold text-text-light mb-2">Purpose:</h4>
+                  <h4 class="text-sm sm:text-base font-bold text-text-light mb-2">{{ t('farms.purpose') }}</h4>
                   <p class="text-xs sm:text-sm text-text-muted leading-relaxed">
                     {{ farm.purpose }}
                   </p>
                 </div>
                 <div>
-                  <h4 class="text-sm sm:text-base font-bold text-text-light mb-2">Benefits:</h4>
+                  <h4 class="text-sm sm:text-base font-bold text-text-light mb-2">{{ t('farms.benefits') }}</h4>
                   <ul class="text-xs sm:text-sm text-text-muted space-y-1.5">
                     <li v-for="(benefit, benefitIndex) in farm.benefits" :key="benefitIndex" class="flex items-start">
                       <span class="text-blood-red mr-1.5 mt-0.5">•</span>
@@ -130,7 +124,7 @@
             class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-paladin-gold text-center mb-8 md:mb-10 lg:mb-12"
             style="text-shadow: 0 0 40px rgba(255, 215, 0, 0.4)"
           >
-            How It Works
+            {{ t('farms.how.title') }}
           </h3>
           <div class="space-y-6 md:space-y-8">
             <div class="flex items-start gap-4">
@@ -141,11 +135,10 @@
               </div>
               <div class="flex-1">
                 <h4 class="text-base sm:text-lg font-bold text-paladin-gold mb-2">
-                  Send Your Farms
+                  {{ t('farms.how.step1.title') }}
                 </h4>
                 <p class="text-sm sm:text-base text-text-muted leading-relaxed">
-                  As a member of Blood Paladins, you can send your farm accounts to one of our farm alliances. 
-                  This helps organize our resource network and keeps farms active and productive.
+                  {{ t('farms.how.step1.desc') }}
                 </p>
               </div>
             </div>
@@ -157,11 +150,10 @@
               </div>
               <div class="flex-1">
                 <h4 class="text-base sm:text-lg font-bold text-paladin-gold mb-2">
-                  Organized Management
+                  {{ t('farms.how.step2.title') }}
                 </h4>
                 <p class="text-sm sm:text-base text-text-muted leading-relaxed">
-                  Farm alliances are managed by dedicated officers who ensure farms are active, gathering resources, 
-                  and contributing to the family's overall strength and strategic positioning.
+                  {{ t('farms.how.step2.desc') }}
                 </p>
               </div>
             </div>
@@ -173,13 +165,11 @@
               </div>
               <div class="flex-1">
                 <h4 class="text-base sm:text-lg font-bold text-paladin-gold mb-2">
-                  Strategic Support & CF Bombs
+                  {{ t('farms.how.step3.title') }}
                 </h4>
                 <p class="text-sm sm:text-base text-text-muted leading-relaxed">
-                  By having farms in dedicated alliances, main alliance members can focus on battles and events 
-                  while farms provide essential resource support and strategic positioning. During KVK and major operations, 
-                  these farms serve as <span class="text-blood-red font-semibold">CF Bombs</span>—critical tactical assets 
-                  that provide strategic advantages and operational flexibility when we need them most.
+                  {{ t('farms.how.step3.desc') }}
+                  <span class="text-blood-red font-semibold">{{ t('farms.how.step3.cf') }}</span>{{ t('farms.how.step3.end') }}
                 </p>
               </div>
             </div>
@@ -191,47 +181,49 @@
 </template>
 
 <script setup lang="ts">
-const farmAlliances = [
+import { computed } from "vue";
+import { useI18n } from "@/composables/useI18n";
+
+const { t } = useI18n();
+
+const farmAlliances = computed(() => [
   {
-    name: "Paladins Farm1",
-    role: "Primary Farm Alliance",
-    purpose:
-      "The primary resource gathering alliance for Blood Paladins. Focuses on efficient resource collection, strategic positioning, and serves as CF Bombs for KVK operations.",
+    name: t.value('farms.farm1.name'),
+    role: t.value('farms.farm1.role'),
+    purpose: t.value('farms.farm1.purpose'),
     benefits: [
-      "Organized resource management",
-      "Strategic territory positioning",
-      "CF Bomb operations for KVK",
-      "Active resource gathering",
-      "Tactical support for main alliance",
+      t.value('farms.farm1.benefit1'),
+      t.value('farms.farm1.benefit2'),
+      t.value('farms.farm1.benefit3'),
+      t.value('farms.farm1.benefit4'),
+      t.value('farms.farm1.benefit5'),
     ],
   },
   {
-    name: "Paladins Farm2",
-    role: "Secondary Farm Alliance",
-    purpose:
-      "Secondary support alliance that complements Farm1. Provides additional resource capacity, strategic flexibility, and CF Bomb capabilities for major operations.",
+    name: t.value('farms.farm2.name'),
+    role: t.value('farms.farm2.role'),
+    purpose: t.value('farms.farm2.purpose'),
     benefits: [
-      "Additional resource capacity",
-      "CF Bomb support for operations",
-      "Backup strategic positioning",
-      "Flexible resource allocation",
-      "Tactical redundancy and security",
+      t.value('farms.farm2.benefit1'),
+      t.value('farms.farm2.benefit2'),
+      t.value('farms.farm2.benefit3'),
+      t.value('farms.farm2.benefit4'),
+      t.value('farms.farm2.benefit5'),
     ],
   },
   {
-    name: "Paladins Farm3",
-    role: "Additional Farm Alliance",
-    purpose:
-      "Additional farm alliance for expanded resource network. Ensures maximum resource gathering capacity and provides additional CF Bomb capabilities for large-scale operations.",
+    name: t.value('farms.farm3.name'),
+    role: t.value('farms.farm3.role'),
+    purpose: t.value('farms.farm3.purpose'),
     benefits: [
-      "Maximum resource capacity",
-      "CF Bomb operations support",
-      "Extended network coverage",
-      "Enhanced strategic options",
-      "Complete operational network",
+      t.value('farms.farm3.benefit1'),
+      t.value('farms.farm3.benefit2'),
+      t.value('farms.farm3.benefit3'),
+      t.value('farms.farm3.benefit4'),
+      t.value('farms.farm3.benefit5'),
     ],
   },
-];
+]);
 </script>
 
 <style scoped>

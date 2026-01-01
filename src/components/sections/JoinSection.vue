@@ -46,7 +46,7 @@
           class="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-blood-red mb-4 sm:mb-6 drop-shadow-2xl"
           style="text-shadow: 0 0 60px rgba(220, 20, 60, 0.5)"
         >
-          Join Our Family
+          {{ t('join.title') }}
         </h2>
         <div
           class="w-24 h-1 bg-gradient-to-r from-transparent via-paladin-gold to-transparent mx-auto"
@@ -65,15 +65,14 @@
             <p
               class="text-xl sm:text-2xl md:text-3xl text-text-light leading-relaxed text-center font-semibold"
             >
-              Ready to become part of the
-              <span class="text-paladin-gold font-bold">Blood Paladins</span> family?
+              {{ t('join.opening.ready') }}
+              <span class="text-paladin-gold font-bold">{{ t('join.opening.family') }}</span>
+              {{ t('join.opening.question') }}
             </p>
             <p
               class="text-base sm:text-lg md:text-xl text-text-muted leading-relaxed text-center"
             >
-              We're looking for dedicated, active players who share our values of honor, loyalty, and commitment 
-              to excellence. Whether you're an experienced warrior or just starting your journey, there's a place 
-              for you in our family.
+              {{ t('join.opening.description') }}
             </p>
             <div
               class="my-8 sm:my-10 border-l-4 border-paladin-gold pl-6 sm:pl-8 py-4 bg-paladin-gold/5 rounded-r-lg"
@@ -82,7 +81,7 @@
                 class="text-lg sm:text-xl md:text-2xl text-paladin-gold font-semibold leading-relaxed text-center"
                 style="text-shadow: 0 0 20px rgba(255, 215, 0, 0.4)"
               >
-                "In Blood Paladins, you don't just join an alliance. You come home."
+                "{{ t('join.opening.quote') }}"
               </p>
             </div>
           </div>
@@ -115,79 +114,74 @@
                 </svg>
               </div>
               <h3 class="text-3xl sm:text-4xl md:text-5xl font-bold text-blood-red mb-3">
-                Blood Paladins
+                {{ t('join.main.title') }}
               </h3>
               <p class="text-paladin-gold font-semibold text-lg sm:text-xl md:text-2xl mb-6">
-                Main Alliance
+                {{ t('join.main.subtitle') }}
               </p>
             </div>
 
             <div class="space-y-6">
               <div>
                 <h4 class="text-xl sm:text-2xl font-bold text-paladin-gold mb-4 text-center">
-                  About Blood Paladins Main Alliance
+                  {{ t('join.main.about.title') }}
                 </h4>
                 <p class="text-base sm:text-lg text-text-muted leading-relaxed text-center mb-4">
-                  The heart and soul of our family. Blood Paladins Main Alliance is where our most experienced 
-                  warriors, strategic minds, and dedicated leaders unite to forge an unbreakable force. This is 
-                  the pinnacle of our family's strength—a brotherhood of elite warriors bound by honor, loyalty, 
-                  and an unwavering commitment to excellence.
+                  {{ t('join.main.about.p1') }}
                 </p>
                 <p class="text-base sm:text-lg text-text-muted leading-relaxed text-center">
-                  Led by Pryda and supported by LundiX and our team of officers, the Main Alliance represents 
-                  the highest level of commitment and skill. Here, every member is a guardian, every officer a 
-                  protector, and every decision made with the family's future in mind.
+                  {{ t('join.main.about.p2') }}
                 </p>
               </div>
 
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <h5 class="text-lg sm:text-xl font-bold text-text-light mb-3">What We Offer:</h5>
+                  <h5 class="text-lg sm:text-xl font-bold text-text-light mb-3">{{ t('join.main.offer.title') }}</h5>
                   <ul class="space-y-2 text-text-muted text-sm sm:text-base">
                     <li class="flex items-start">
                       <span class="text-blood-red mr-2 mt-0.5">•</span>
-                      <span>Elite warriors and strategic minds working together</span>
+                      <span>{{ t('join.main.offer.item1') }}</span>
                     </li>
                     <li class="flex items-start">
                       <span class="text-blood-red mr-2 mt-0.5">•</span>
-                      <span>Direct leadership from Pryda and LundiX</span>
+                      <span>{{ t('join.main.offer.item2') }}</span>
                     </li>
                     <li class="flex items-start">
                       <span class="text-blood-red mr-2 mt-0.5">•</span>
-                      <span>Maximum power and kingdom influence</span>
+                      <span>{{ t('join.main.offer.item3') }}</span>
                     </li>
                     <li class="flex items-start">
                       <span class="text-blood-red mr-2 mt-0.5">•</span>
-                      <span>Strategic coordination and battle excellence</span>
+                      <span>{{ t('join.main.offer.item4') }}</span>
                     </li>
                     <li class="flex items-start">
                       <span class="text-blood-red mr-2 mt-0.5">•</span>
-                      <span>Active participation in kingdom leadership</span>
+                      <span>{{ t('join.main.offer.item5') }}</span>
                     </li>
                   </ul>
                 </div>
                 <div>
-                  <h5 class="text-lg sm:text-xl font-bold text-text-light mb-3">Who Should Join:</h5>
+                  <h5 class="text-lg sm:text-xl font-bold text-text-light mb-3">{{ t('join.main.who.title') }}</h5>
                   <ul class="space-y-2 text-text-muted text-sm sm:text-base">
                     <li class="flex items-start">
                       <span class="text-paladin-gold mr-2 mt-0.5">•</span>
-                      <span>Experienced players with high power levels</span>
+                      <span>{{ t('join.main.who.item1') }}</span>
                     </li>
                     <li class="flex items-start">
                       <span class="text-paladin-gold mr-2 mt-0.5">•</span>
-                      <span>Dedicated warriors committed to excellence</span>
+                      <span>{{ t('join.main.who.item2') }}</span>
                     </li>
                     <li class="flex items-start">
                       <span class="text-paladin-gold mr-2 mt-0.5">•</span>
-                      <span>Players ready for maximum responsibility</span>
+                      <span>{{ t('join.main.who.item3') }}</span>
                     </li>
                     <li class="flex items-start">
                       <span class="text-paladin-gold mr-2 mt-0.5">•</span>
-                      <span>Those who have completed Academy training</span>
+                      <span>{{ t('join.main.who.item4') }}</span>
                     </li>
                     <li class="flex items-start">
                       <span class="text-paladin-gold mr-2 mt-0.5">•</span>
-                      <span>Warriors seeking the ultimate family bond</span>
+                      <span>{{ t('join.main.who.item5') }}</span>
                     </li>
                   </ul>
                 </div>
@@ -220,79 +214,74 @@
                 </svg>
               </div>
               <h3 class="text-3xl sm:text-4xl md:text-5xl font-bold text-paladin-gold mb-3">
-                Paladins Academy
+                {{ t('join.academy.title') }}
               </h3>
               <p class="text-blood-red font-semibold text-lg sm:text-xl md:text-2xl mb-6">
-                Training Ground
+                {{ t('join.academy.subtitle') }}
               </p>
             </div>
 
             <div class="space-y-6">
               <div>
                 <h4 class="text-xl sm:text-2xl font-bold text-paladin-gold mb-4 text-center">
-                  About Paladins Academy
+                  {{ t('join.academy.about.title') }}
                 </h4>
                 <p class="text-base sm:text-lg text-text-muted leading-relaxed text-center mb-4">
-                  The training ground where new warriors begin their journey with Blood Paladins. Paladins Academy 
-                  is designed for members who are learning the fundamentals, developing their skills, and preparing 
-                  for advancement to the main alliance.
+                  {{ t('join.academy.about.p1') }}
                 </p>
                 <p class="text-base sm:text-lg text-text-muted leading-relaxed text-center">
-                  Under the guidance of experienced leaders and officers, Academy members receive personalized 
-                  training, mentorship, and support as they grow into elite warriors worthy of joining Blood 
-                  Paladins Main Alliance. This is where your journey begins, where you learn what it means to be 
-                  a Blood Paladin.
+                  {{ t('join.academy.about.p2') }}
                 </p>
               </div>
 
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <h5 class="text-lg sm:text-xl font-bold text-text-light mb-3">What We Offer:</h5>
+                  <h5 class="text-lg sm:text-xl font-bold text-text-light mb-3">{{ t('join.academy.offer.title') }}</h5>
                   <ul class="space-y-2 text-text-muted text-sm sm:text-base">
                     <li class="flex items-start">
                       <span class="text-paladin-gold mr-2 mt-0.5">•</span>
-                      <span>Personalized training and mentorship programs</span>
+                      <span>{{ t('join.academy.offer.item1') }}</span>
                     </li>
                     <li class="flex items-start">
                       <span class="text-paladin-gold mr-2 mt-0.5">•</span>
-                      <span>Clear progression path to Main Alliance</span>
+                      <span>{{ t('join.academy.offer.item2') }}</span>
                     </li>
                     <li class="flex items-start">
                       <span class="text-paladin-gold mr-2 mt-0.5">•</span>
-                      <span>Supportive learning environment</span>
+                      <span>{{ t('join.academy.offer.item3') }}</span>
                     </li>
                     <li class="flex items-start">
                       <span class="text-paladin-gold mr-2 mt-0.5">•</span>
-                      <span>Guidance from experienced officers</span>
+                      <span>{{ t('join.academy.offer.item4') }}</span>
                     </li>
                     <li class="flex items-start">
                       <span class="text-paladin-gold mr-2 mt-0.5">•</span>
-                      <span>Fundamental game knowledge and strategies</span>
+                      <span>{{ t('join.academy.offer.item5') }}</span>
                     </li>
                   </ul>
                 </div>
                 <div>
-                  <h5 class="text-lg sm:text-xl font-bold text-text-light mb-3">Who Should Join:</h5>
+                  <h5 class="text-lg sm:text-xl font-bold text-text-light mb-3">{{ t('join.academy.who.title') }}</h5>
                   <ul class="space-y-2 text-text-muted text-sm sm:text-base">
                     <li class="flex items-start">
                       <span class="text-blood-red mr-2 mt-0.5">•</span>
-                      <span>New players starting their journey</span>
+                      <span>{{ t('join.academy.who.item1') }}</span>
                     </li>
                     <li class="flex items-start">
                       <span class="text-blood-red mr-2 mt-0.5">•</span>
-                      <span>Players looking to improve their skills</span>
+                      <span>{{ t('join.academy.who.item2') }}</span>
                     </li>
                     <li class="flex items-start">
                       <span class="text-blood-red mr-2 mt-0.5">•</span>
-                      <span>Those seeking mentorship and guidance</span>
+                      <span>{{ t('join.academy.who.item3') }}</span>
                     </li>
                     <li class="flex items-start">
                       <span class="text-blood-red mr-2 mt-0.5">•</span>
-                      <span>Players preparing for Main Alliance</span>
+                      <span>{{ t('join.academy.who.item4') }}</span>
                     </li>
                     <li class="flex items-start">
                       <span class="text-blood-red mr-2 mt-0.5">•</span>
-                      <span>Anyone wanting to learn Blood Paladins values</span>
+                      <span>{{ t('join.academy.who.item5') }}</span>
                     </li>
                   </ul>
                 </div>
@@ -325,80 +314,74 @@
                 </svg>
               </div>
               <h3 class="text-3xl sm:text-4xl md:text-5xl font-bold text-blood-red mb-3">
-                Farm Alliances
+                {{ t('join.farms.title') }}
               </h3>
               <p class="text-paladin-gold font-semibold text-lg sm:text-xl md:text-2xl mb-6">
-                Resource Network
+                {{ t('join.farms.subtitle') }}
               </p>
             </div>
 
             <div class="space-y-6">
               <div>
                 <h4 class="text-xl sm:text-2xl font-bold text-paladin-gold mb-4 text-center">
-                  About Our Farm Alliances
+                  {{ t('join.farms.about.title') }}
                 </h4>
                 <p class="text-base sm:text-lg text-text-muted leading-relaxed text-center mb-4">
-                  Our Farm Alliances (Paladins Farm1, Farm2, and Farm3) are the backbone of our family's resource 
-                  network. These alliances provide essential support to the main alliance through strategic resource 
-                  gathering and positioning.
+                  {{ t('join.farms.about.p1') }}
                 </p>
                 <p class="text-base sm:text-lg text-text-muted leading-relaxed text-center">
-                  Every member of Blood Paladins can send their farms to one of our farm alliances. This allows for 
-                  organized resource management, strategic positioning, and ensures that our main alliance members 
-                  can focus on battles and events while farms are safely managed and productive. Beyond resource 
-                  gathering, our farm alliances serve a crucial strategic role as CF Bombs during KVK events and 
-                  other major operations.
+                  {{ t('join.farms.about.p2') }}
                 </p>
               </div>
 
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <h5 class="text-lg sm:text-xl font-bold text-text-light mb-3">What We Offer:</h5>
+                  <h5 class="text-lg sm:text-xl font-bold text-text-light mb-3">{{ t('join.farms.offer.title') }}</h5>
                   <ul class="space-y-2 text-text-muted text-sm sm:text-base">
                     <li class="flex items-start">
                       <span class="text-blood-red mr-2 mt-0.5">•</span>
-                      <span>Organized resource gathering and management</span>
+                      <span>{{ t('join.farms.offer.item1') }}</span>
                     </li>
                     <li class="flex items-start">
                       <span class="text-blood-red mr-2 mt-0.5">•</span>
-                      <span>Strategic territory positioning</span>
+                      <span>{{ t('join.farms.offer.item2') }}</span>
                     </li>
                     <li class="flex items-start">
                       <span class="text-blood-red mr-2 mt-0.5">•</span>
-                      <span>Safe and protected farm accounts</span>
+                      <span>{{ t('join.farms.offer.item3') }}</span>
                     </li>
                     <li class="flex items-start">
                       <span class="text-blood-red mr-2 mt-0.5">•</span>
-                      <span>CF Bomb capabilities for KVK operations</span>
+                      <span>{{ t('join.farms.offer.item4') }}</span>
                     </li>
                     <li class="flex items-start">
                       <span class="text-blood-red mr-2 mt-0.5">•</span>
-                      <span>Dedicated farm alliance management</span>
+                      <span>{{ t('join.farms.offer.item5') }}</span>
                     </li>
                   </ul>
                 </div>
                 <div>
-                  <h5 class="text-lg sm:text-xl font-bold text-text-light mb-3">Who Should Join:</h5>
+                  <h5 class="text-lg sm:text-xl font-bold text-text-light mb-3">{{ t('join.farms.who.title') }}</h5>
                   <ul class="space-y-2 text-text-muted text-sm sm:text-base">
                     <li class="flex items-start">
                       <span class="text-paladin-gold mr-2 mt-0.5">•</span>
-                      <span>Main Alliance members with farm accounts</span>
+                      <span>{{ t('join.farms.who.item1') }}</span>
                     </li>
                     <li class="flex items-start">
                       <span class="text-paladin-gold mr-2 mt-0.5">•</span>
-                      <span>Players focused on resource gathering</span>
+                      <span>{{ t('join.farms.who.item2') }}</span>
                     </li>
                     <li class="flex items-start">
                       <span class="text-paladin-gold mr-2 mt-0.5">•</span>
-                      <span>Those wanting organized farm management</span>
+                      <span>{{ t('join.farms.who.item3') }}</span>
                     </li>
                     <li class="flex items-start">
                       <span class="text-paladin-gold mr-2 mt-0.5">•</span>
-                      <span>Members contributing to strategic operations</span>
+                      <span>{{ t('join.farms.who.item4') }}</span>
                     </li>
                     <li class="flex items-start">
                       <span class="text-paladin-gold mr-2 mt-0.5">•</span>
-                      <span>Anyone supporting the family's resource network</span>
+                      <span>{{ t('join.farms.who.item5') }}</span>
                     </li>
                   </ul>
                 </div>
@@ -421,18 +404,17 @@
               class="text-3xl sm:text-4xl md:text-5xl font-bold text-paladin-gold mb-4"
               style="text-shadow: 0 0 40px rgba(255, 215, 0, 0.4)"
             >
-              Ready to Join?
+              {{ t('join.contact.title') }}
             </h3>
             <p
               class="text-lg sm:text-xl md:text-2xl text-text-light leading-relaxed max-w-3xl mx-auto"
             >
-              Contact us through Telegram or Discord to start your application process.
+              {{ t('join.contact.description') }}
             </p>
             <p
               class="text-base sm:text-lg md:text-xl text-text-muted leading-relaxed max-w-3xl mx-auto"
             >
-              Tell us about yourself, your power level, which alliance you're interested in joining, and why 
-              you want to become part of the Blood Paladins family. We're waiting to welcome you home.
+              {{ t('join.contact.details') }}
             </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 pt-4">
               <a
@@ -449,7 +431,7 @@
                     d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221c-.697 0-1.26.563-1.26 1.26s.563 1.26 1.26 1.26 1.26-.563 1.26-1.26-.563-1.26-1.26-1.26zm-4.461 0c-.697 0-1.26.563-1.26 1.26s.563 1.26 1.26 1.26 1.26-.563 1.26-1.26-.563-1.26-1.26-1.26zm-4.461 0c-.697 0-1.26.563-1.26 1.26s.563 1.26 1.26 1.26 1.26-.563 1.26-1.26-.563-1.26-1.26-1.26z"
                   />
                 </svg>
-                <span class="relative z-10">Join on Discord</span>
+                <span class="relative z-10">{{ t('join.contact.discord') }}</span>
                 <div
                   class="absolute inset-0 bg-gradient-to-r from-blood-red-light via-blood-red to-blood-red-dark opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 ></div>
@@ -468,7 +450,7 @@
                     d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.559z"
                   />
                 </svg>
-                <span class="relative z-10">Join on Telegram</span>
+                <span class="relative z-10">{{ t('join.contact.telegram') }}</span>
               </a>
             </div>
           </div>
@@ -494,6 +476,9 @@
 </template>
 
 <script setup lang="ts">
+import { useI18n } from '@/composables/useI18n'
+
+const { t } = useI18n()
 </script>
 
 <style scoped>

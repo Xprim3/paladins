@@ -35,39 +35,51 @@
 
     <div class="relative z-10 container mx-auto px-4">
       <!-- Main Heading -->
-      <div class="text-center mb-12 md:mb-16 lg:mb-20 transform-gpu" style="transform: translateZ(50px)">
+      <div
+        class="text-center mb-12 md:mb-16 lg:mb-20 transform-gpu"
+        style="transform: translateZ(50px)"
+      >
         <h2
           class="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-blood-red mb-4 drop-shadow-2xl"
           style="text-shadow: 0 0 60px rgba(220, 20, 60, 0.5)"
         >
-          Blood Paladins
+          {{ t("main.alliance.title") }}
         </h2>
-        <p class="text-xl sm:text-2xl md:text-3xl text-paladin-gold font-semibold mb-4">
-          Main Alliance
+        <p
+          class="text-xl sm:text-2xl md:text-3xl text-paladin-gold font-semibold mb-4"
+        >
+          {{ t("main.alliance.subtitle") }}
         </p>
-        <div class="w-24 h-1 bg-gradient-to-r from-transparent via-paladin-gold to-transparent mx-auto"></div>
+        <div
+          class="w-24 h-1 bg-gradient-to-r from-transparent via-paladin-gold to-transparent mx-auto"
+        ></div>
       </div>
 
       <!-- Alliance Overview -->
-      <div class="max-w-5xl mx-auto mb-12 md:mb-16 lg:mb-20 transform-gpu" style="transform: translateZ(40px)">
+      <div
+        class="max-w-5xl mx-auto mb-12 md:mb-16 lg:mb-20 transform-gpu"
+        style="transform: translateZ(40px)"
+      >
         <div
           class="bg-gradient-to-br from-dark-surface/90 via-dark-surface/70 to-dark-surface/90 backdrop-blur-md border-2 border-blood-red/30 rounded-3xl p-8 sm:p-10 md:p-12 shadow-2xl"
         >
           <p
             class="text-lg sm:text-xl md:text-2xl text-text-light leading-relaxed text-center mb-6"
           >
-            The <span class="text-blood-red font-bold">heart</span> and 
-            <span class="text-paladin-gold font-bold">soul</span> of our family. 
-            This is where our most experienced warriors, strategic minds, and dedicated leaders 
-            unite to forge an unbreakable force.
+            {{ t("main.alliance.overview.p1") }}
+            <span class="text-blood-red font-bold">{{
+              t("main.alliance.overview.p1.heart")
+            }}</span>
+            {{ t("main.alliance.overview.p1.and") }}
+            <span class="text-paladin-gold font-bold">{{
+              t("main.alliance.overview.p1.soul")
+            }}</span>
+            {{ t("main.alliance.overview.p1.end") }}
           </p>
           <p
             class="text-base sm:text-lg md:text-xl text-text-muted leading-relaxed text-center"
           >
-            Blood Paladins Main Alliance represents the pinnacle of our family's strength—a brotherhood 
-            of elite warriors bound by honor, loyalty, and an unwavering commitment to excellence. 
-            Here, every member is a guardian, every officer a protector, and every decision made 
-            with the family's future in mind.
+            {{ t("main.alliance.overview.p2") }}
           </p>
         </div>
       </div>
@@ -81,7 +93,7 @@
             text-shadow: 0 0 40px rgba(255, 215, 0, 0.4);
           "
         >
-          Leadership Structure
+          {{ t("main.alliance.leadership.title") }}
         </h3>
 
         <!-- Leader -->
@@ -108,37 +120,47 @@
                   />
                 </svg>
               </div>
-              <h4 class="text-2xl sm:text-3xl md:text-4xl font-bold text-blood-red mb-2">
-                Pryda
+              <h4
+                class="text-2xl sm:text-3xl md:text-4xl font-bold text-blood-red mb-2"
+              >
+                {{ t("main.alliance.leader.name") }}
               </h4>
-              <p class="text-paladin-gold font-semibold text-lg sm:text-xl mb-6">Leader</p>
-              
+              <p
+                class="text-paladin-gold font-semibold text-lg sm:text-xl mb-6"
+              >
+                {{ t("main.alliance.leader.role") }}
+              </p>
+
               <div class="mt-6 space-y-4">
-                <h5 class="text-xl sm:text-2xl font-bold text-text-light mb-4">Duties & Responsibilities</h5>
-                <ul class="text-left max-w-2xl mx-auto space-y-3 text-text-muted">
+                <h5 class="text-xl sm:text-2xl font-bold text-text-light mb-4">
+                  {{ t("main.alliance.leader.duties.title") }}
+                </h5>
+                <ul
+                  class="text-left max-w-2xl mx-auto space-y-3 text-text-muted"
+                >
                   <li class="flex items-start">
                     <span class="text-blood-red mr-3 mt-1">•</span>
-                    <span>Ultimate decision-making authority and strategic direction for the alliance</span>
+                    <span>{{ t("main.alliance.leader.duty1") }}</span>
                   </li>
                   <li class="flex items-start">
                     <span class="text-blood-red mr-3 mt-1">•</span>
-                    <span>Oversees all alliance operations, events, and member activities</span>
+                    <span>{{ t("main.alliance.leader.duty2") }}</span>
                   </li>
                   <li class="flex items-start">
                     <span class="text-blood-red mr-3 mt-1">•</span>
-                    <span>Sets the vision, values, and culture of Blood Paladins</span>
+                    <span>{{ t("main.alliance.leader.duty3") }}</span>
                   </li>
                   <li class="flex items-start">
                     <span class="text-blood-red mr-3 mt-1">•</span>
-                    <span>Coordinates with officers to ensure smooth operations and member support</span>
+                    <span>{{ t("main.alliance.leader.duty4") }}</span>
                   </li>
                   <li class="flex items-start">
                     <span class="text-blood-red mr-3 mt-1">•</span>
-                    <span>Represents the alliance in kingdom-wide matters and diplomacy</span>
+                    <span>{{ t("main.alliance.leader.duty5") }}</span>
                   </li>
                   <li class="flex items-start">
                     <span class="text-blood-red mr-3 mt-1">•</span>
-                    <span>Ensures every member feels valued, protected, and part of the family</span>
+                    <span>{{ t("main.alliance.leader.duty6") }}</span>
                   </li>
                 </ul>
               </div>
@@ -151,9 +173,11 @@
           <h4
             class="text-2xl sm:text-3xl md:text-4xl font-bold text-paladin-gold text-center mb-8 sm:mb-12"
           >
-            Officers
+            {{ t("main.alliance.officers.title") }}
           </h4>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8"
+          >
             <div
               v-for="(officer, index) in officers"
               :key="index"
@@ -182,18 +206,28 @@
                       />
                     </svg>
                   </div>
-                  <h5 class="text-xl sm:text-2xl font-bold text-paladin-gold mb-2">
+                  <h5
+                    class="text-xl sm:text-2xl font-bold text-paladin-gold mb-2"
+                  >
                     {{ officer.name }}
                   </h5>
-                  <p class="text-blood-red font-semibold text-sm sm:text-base mb-4">
+                  <p
+                    class="text-blood-red font-semibold text-sm sm:text-base mb-4"
+                  >
                     {{ officer.role }}
                   </p>
                 </div>
 
                 <div class="space-y-2">
-                  <h6 class="text-sm font-bold text-text-light mb-2">Duties:</h6>
+                  <h6 class="text-sm font-bold text-text-light mb-2">
+                    {{ t("main.alliance.officers.duties") }}
+                  </h6>
                   <ul class="text-xs sm:text-sm text-text-muted space-y-1.5">
-                    <li v-for="(duty, dutyIndex) in officer.duties" :key="dutyIndex" class="flex items-start">
+                    <li
+                      v-for="(duty, dutyIndex) in officer.duties"
+                      :key="dutyIndex"
+                      class="flex items-start"
+                    >
                       <span class="text-paladin-gold mr-2 mt-0.5">•</span>
                       <span>{{ duty }}</span>
                     </li>
@@ -206,14 +240,17 @@
       </div>
 
       <!-- Member Responsibilities -->
-      <div class="max-w-6xl mx-auto transform-gpu" style="transform: translateZ(40px)">
+      <div
+        class="max-w-6xl mx-auto transform-gpu"
+        style="transform: translateZ(40px)"
+      >
         <h3
           class="text-3xl sm:text-4xl md:text-5xl font-bold text-paladin-gold text-center mb-8 sm:mb-12"
           style="text-shadow: 0 0 40px rgba(255, 215, 0, 0.4)"
         >
-          Member Duties & Responsibilities
+          {{ t("main.alliance.members.title") }}
         </h3>
-        
+
         <div
           class="bg-gradient-to-br from-dark-surface/80 via-dark-surface/60 to-dark-surface/80 backdrop-blur-md border-2 border-paladin-gold/30 rounded-3xl p-8 sm:p-10 md:p-12 shadow-2xl"
         >
@@ -224,7 +261,9 @@
               class="flex items-start gap-4 sm:gap-6"
             >
               <div class="flex-shrink-0">
-                <div class="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-paladin-gold/20 to-paladin-gold/10 rounded-full flex items-center justify-center border-2 border-paladin-gold/40">
+                <div
+                  class="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-paladin-gold/20 to-paladin-gold/10 rounded-full flex items-center justify-center border-2 border-paladin-gold/40"
+                >
                   <svg
                     class="w-6 h-6 sm:w-7 sm:h-7 text-paladin-gold"
                     fill="none"
@@ -241,10 +280,14 @@
                 </div>
               </div>
               <div class="flex-1">
-                <h4 class="text-lg sm:text-xl md:text-2xl font-bold text-paladin-gold mb-2 sm:mb-3">
+                <h4
+                  class="text-lg sm:text-xl md:text-2xl font-bold text-paladin-gold mb-2 sm:mb-3"
+                >
                   {{ responsibility.title }}
                 </h4>
-                <p class="text-sm sm:text-base md:text-lg text-text-muted leading-relaxed">
+                <p
+                  class="text-sm sm:text-base md:text-lg text-text-muted leading-relaxed"
+                >
                   {{ responsibility.description }}
                 </p>
               </div>
@@ -272,141 +315,136 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from "vue";
+import { onMounted, computed } from "vue";
+import { useI18n } from "@/composables/useI18n";
 
-const officers = [
+const { t } = useI18n();
+
+const officers = computed(() => [
   {
     name: "LundiX",
-    role: "Counselor",
+    role: t.value("main.alliance.officer.lundix.role"),
     duties: [
-      "Assists leader in strategic decisions",
-      "Manages alliance operations daily",
-      "Supports member growth and development",
-      "Coordinates events and activities",
-      "Acts as highest officer authority",
+      t.value("main.alliance.officer.lundix.duty1"),
+      t.value("main.alliance.officer.lundix.duty2"),
+      t.value("main.alliance.officer.lundix.duty3"),
+      t.value("main.alliance.officer.lundix.duty4"),
+      t.value("main.alliance.officer.lundix.duty5"),
     ],
   },
   {
     name: "Aetherius",
-    role: "Strategic Commander",
+    role: t.value("main.alliance.officer.aetherius.role"),
     duties: [
-      "Develops battle strategies",
-      "Coordinates war efforts",
-      "Analyzes enemy movements",
-      "Plans tactical operations",
-      "Leads strategic planning sessions",
+      t.value("main.alliance.officer.aetherius.duty1"),
+      t.value("main.alliance.officer.aetherius.duty2"),
+      t.value("main.alliance.officer.aetherius.duty3"),
+      t.value("main.alliance.officer.aetherius.duty4"),
+      t.value("main.alliance.officer.aetherius.duty5"),
     ],
   },
   {
     name: "Valorius",
-    role: "Battle Coordinator",
+    role: t.value("main.alliance.officer.valorius.role"),
     duties: [
-      "Organizes alliance battles",
-      "Manages rally coordination",
-      "Ensures member participation",
-      "Tracks battle performance",
-      "Coordinates attack formations",
+      t.value("main.alliance.officer.valorius.duty1"),
+      t.value("main.alliance.officer.valorius.duty2"),
+      t.value("main.alliance.officer.valorius.duty3"),
+      t.value("main.alliance.officer.valorius.duty4"),
+      t.value("main.alliance.officer.valorius.duty5"),
     ],
   },
   {
     name: "Sanguis",
-    role: "Alliance Advisor",
+    role: t.value("main.alliance.officer.sanguis.role"),
     duties: [
-      "Provides strategic counsel",
-      "Mediates member conflicts",
-      "Advises on alliance matters",
-      "Supports decision-making",
-      "Guides alliance policies",
+      t.value("main.alliance.officer.sanguis.duty1"),
+      t.value("main.alliance.officer.sanguis.duty2"),
+      t.value("main.alliance.officer.sanguis.duty3"),
+      t.value("main.alliance.officer.sanguis.duty4"),
+      t.value("main.alliance.officer.sanguis.duty5"),
     ],
   },
   {
     name: "Crimson",
-    role: "Tactical Specialist",
+    role: t.value("main.alliance.officer.crimson.role"),
     duties: [
-      "Executes tactical operations",
-      "Manages resource allocation",
-      "Optimizes alliance efficiency",
-      "Handles special missions",
-      "Implements strategic plans",
+      t.value("main.alliance.officer.crimson.duty1"),
+      t.value("main.alliance.officer.crimson.duty2"),
+      t.value("main.alliance.officer.crimson.duty3"),
+      t.value("main.alliance.officer.crimson.duty4"),
+      t.value("main.alliance.officer.crimson.duty5"),
     ],
   },
   {
     name: "Aurelius",
-    role: "Recruitment Officer",
+    role: t.value("main.alliance.officer.aurelius.role"),
     duties: [
-      "Screens new members",
-      "Onboards recruits",
-      "Maintains member database",
-      "Ensures quality standards",
-      "Manages recruitment process",
+      t.value("main.alliance.officer.aurelius.duty1"),
+      t.value("main.alliance.officer.aurelius.duty2"),
+      t.value("main.alliance.officer.aurelius.duty3"),
+      t.value("main.alliance.officer.aurelius.duty4"),
+      t.value("main.alliance.officer.aurelius.duty5"),
     ],
   },
   {
     name: "Ignis",
-    role: "Training Master",
+    role: t.value("main.alliance.officer.ignis.role"),
     duties: [
-      "Trains new members",
-      "Develops training programs",
-      "Mentors alliance members",
-      "Improves member skills",
-      "Conducts skill assessments",
+      t.value("main.alliance.officer.ignis.duty1"),
+      t.value("main.alliance.officer.ignis.duty2"),
+      t.value("main.alliance.officer.ignis.duty3"),
+      t.value("main.alliance.officer.ignis.duty4"),
+      t.value("main.alliance.officer.ignis.duty5"),
     ],
   },
   {
     name: "Guardian",
-    role: "Protection Officer",
+    role: t.value("main.alliance.officer.guardian.role"),
     duties: [
-      "Protects alliance members",
-      "Monitors threats",
-      "Ensures member safety",
-      "Manages security protocols",
-      "Responds to emergencies",
+      t.value("main.alliance.officer.guardian.duty1"),
+      t.value("main.alliance.officer.guardian.duty2"),
+      t.value("main.alliance.officer.guardian.duty3"),
+      t.value("main.alliance.officer.guardian.duty4"),
+      t.value("main.alliance.officer.guardian.duty5"),
     ],
   },
-];
+]);
 
-const memberResponsibilities = [
+const memberResponsibilities = computed(() => [
   {
-    title: "Active Participation",
-    description:
-      "Regular participation in alliance events, battles, and activities. Your presence and engagement strengthen our family. Attend scheduled events, respond to rally calls, and contribute to alliance goals.",
+    title: t.value("main.alliance.member.active.title"),
+    description: t.value("main.alliance.member.active.desc"),
   },
   {
-    title: "Honor & Respect",
-    description:
-      "Treat every member with honor and respect. Uphold our values in all interactions, both within and outside the alliance. Show dignity to all warriors, regardless of their power or experience.",
+    title: t.value("main.alliance.member.honor.title"),
+    description: t.value("main.alliance.member.honor.desc"),
   },
   {
-    title: "Loyalty & Commitment",
-    description:
-      "Remain loyal to Blood Paladins and committed to our shared goals. Stand with your family through victories and challenges. Your loyalty is the foundation of our strength.",
+    title: t.value("main.alliance.member.loyalty.title"),
+    description: t.value("main.alliance.member.loyalty.desc"),
   },
   {
-    title: "Communication",
-    description:
-      "Maintain open communication with leaders and officers. Report issues, share ideas, and stay connected with the family. Keep leaders informed of your availability and any concerns.",
+    title: t.value("main.alliance.member.communication.title"),
+    description: t.value("main.alliance.member.communication.desc"),
   },
   {
-    title: "Growth & Development",
-    description:
-      "Continuously work on improving your skills and power. Support fellow members in their growth journey. Help train new members and share knowledge with the family.",
+    title: t.value("main.alliance.member.growth.title"),
+    description: t.value("main.alliance.member.growth.desc"),
   },
   {
-    title: "Sacrifice & Support",
-    description:
-      "Be willing to support your family members when needed. Remember: we fight together, we stand together, we die for each other. Put the family's needs above personal gain.",
+    title: t.value("main.alliance.member.sacrifice.title"),
+    description: t.value("main.alliance.member.sacrifice.desc"),
   },
   {
-    title: "Resource Management",
-    description:
-      "Manage your resources wisely and contribute to alliance needs when possible. Support resource gathering efforts and share excess resources with members in need.",
+    title: t.value("main.alliance.member.resource.title"),
+    description: t.value("main.alliance.member.resource.desc"),
   },
   {
-    title: "Battle Readiness",
-    description:
-      "Maintain your armies and commanders in battle-ready condition. Respond promptly to battle calls and follow strategic instructions during combat operations.",
+    title: t.value("main.alliance.member.battle.title"),
+    description: t.value("main.alliance.member.battle.desc"),
   },
-];
+]);
 
 onMounted(() => {
   // Add 3D parallax effect on mouse move
@@ -422,14 +460,19 @@ onMounted(() => {
       const leaderCard = mainAllianceSection.querySelector(".leader-card");
       if (leaderCard) {
         const element = leaderCard as HTMLElement;
-        element.style.transform = `translateZ(30px) rotateY(${xPos * 0.05}deg) rotateX(${-yPos * 0.05}deg)`;
+        element.style.transform = `translateZ(30px) rotateY(${
+          xPos * 0.05
+        }deg) rotateX(${-yPos * 0.05}deg)`;
       }
 
-      const officerCards = mainAllianceSection.querySelectorAll(".officer-card");
+      const officerCards =
+        mainAllianceSection.querySelectorAll(".officer-card");
       officerCards.forEach((card, index) => {
         const element = card as HTMLElement;
         const delay = (index % 4) * 0.05;
-        element.style.transform = `translateZ(20px) rotateY(${xPos * 0.03 + delay}deg) rotateX(${-yPos * 0.03}deg)`;
+        element.style.transform = `translateZ(20px) rotateY(${
+          xPos * 0.03 + delay
+        }deg) rotateX(${-yPos * 0.03}deg)`;
       });
     });
   }

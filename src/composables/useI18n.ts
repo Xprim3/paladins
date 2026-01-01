@@ -44,10 +44,14 @@ export const useI18n = () => {
     languages.find(l => l.code === currentLanguage.value) || languages[0]
   )
 
-  // Reactive translation function
-  const t = computed(() => (key: string): string => {
-    const langTranslations = translations[currentLanguage.value] || translations.en
-    return langTranslations[key] || key
+  // Reactive translation function - computed that returns a function
+  // In templates, Vue auto-unwraps computed refs, so t('key') works
+  // In computed properties, use t.value('key')
+  const t = computed(() => {
+    return (key: string): string => {
+      const langTranslations = translations[currentLanguage.value] || translations.en
+      return langTranslations[key] || key
+    }
   })
 
   return {

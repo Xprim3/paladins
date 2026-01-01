@@ -23,7 +23,7 @@
           class="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-paladin-gold mb-4 drop-shadow-2xl"
           style="text-shadow: 0 0 60px rgba(255, 215, 0, 0.5)"
         >
-          Paladins Academy
+          {{ t('academy.title') }}
         </h2>
         <div class="w-24 h-1 bg-gradient-to-r from-transparent via-paladin-gold to-transparent mx-auto"></div>
       </div>
@@ -36,15 +36,12 @@
           <p
             class="text-base sm:text-lg md:text-xl text-text-light leading-relaxed text-center mb-4"
           >
-            The <span class="text-paladin-gold font-semibold">training ground</span> where new warriors 
-            begin their journey with Blood Paladins. Here, members learn the fundamentals, develop their skills, 
-            and prepare for advancement to the main alliance.
+            {{ t('academy.description.p1') }} <span class="text-paladin-gold font-semibold">{{ t('academy.description.p1.training') }}</span> {{ t('academy.description.p1.end') }}
           </p>
           <p
             class="text-sm sm:text-base md:text-lg text-text-muted leading-relaxed text-center"
           >
-            Under the guidance of experienced leaders and officers, Academy members receive personalized training, 
-            mentorship, and support as they grow into elite warriors worthy of joining Blood Paladins Main Alliance.
+            {{ t('academy.description.p2') }}
           </p>
         </div>
       </div>
@@ -55,7 +52,7 @@
           class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-paladin-gold text-center mb-8 md:mb-10 lg:mb-12"
           style="text-shadow: 0 0 40px rgba(255, 215, 0, 0.4)"
         >
-          Academy Leadership
+          {{ t('academy.leadership.title') }}
         </h3>
 
         <!-- Leader -->
@@ -83,32 +80,32 @@
                 </svg>
               </div>
               <h4 class="text-xl sm:text-2xl md:text-3xl font-bold text-paladin-gold mb-2">
-                Academy Leader
+                {{ t('academy.leader.name') }}
               </h4>
-              <p class="text-blood-red font-semibold text-sm sm:text-base mb-4">Leader</p>
+              <p class="text-blood-red font-semibold text-sm sm:text-base mb-4">{{ t('academy.leader.role') }}</p>
               
               <div class="mt-4 space-y-2">
-                <h5 class="text-base sm:text-lg font-bold text-text-light mb-2">Duties & Responsibilities</h5>
+                <h5 class="text-base sm:text-lg font-bold text-text-light mb-2">{{ t('academy.leader.duties.title') }}</h5>
                 <ul class="text-left max-w-xl mx-auto space-y-1.5 text-text-muted text-xs sm:text-sm">
                   <li class="flex items-start">
                     <span class="text-paladin-gold mr-2 mt-0.5">•</span>
-                    <span>Oversees all Academy operations and training programs</span>
+                    <span>{{ t('academy.leader.duty1') }}</span>
                   </li>
                   <li class="flex items-start">
                     <span class="text-paladin-gold mr-2 mt-0.5">•</span>
-                    <span>Manages member progression and advancement</span>
+                    <span>{{ t('academy.leader.duty2') }}</span>
                   </li>
                   <li class="flex items-start">
                     <span class="text-paladin-gold mr-2 mt-0.5">•</span>
-                    <span>Coordinates with Main Alliance leadership</span>
+                    <span>{{ t('academy.leader.duty3') }}</span>
                   </li>
                   <li class="flex items-start">
                     <span class="text-paladin-gold mr-2 mt-0.5">•</span>
-                    <span>Ensures quality training and member development</span>
+                    <span>{{ t('academy.leader.duty4') }}</span>
                   </li>
                   <li class="flex items-start">
                     <span class="text-paladin-gold mr-2 mt-0.5">•</span>
-                    <span>Mentors new members and supports their growth</span>
+                    <span>{{ t('academy.leader.duty5') }}</span>
                   </li>
                 </ul>
               </div>
@@ -121,7 +118,7 @@
           <h4
             class="text-xl sm:text-2xl md:text-3xl font-bold text-paladin-gold text-center mb-6 sm:mb-8"
           >
-            Officers
+            {{ t('academy.officers.title') }}
           </h4>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             <div
@@ -161,7 +158,7 @@
                 </div>
 
                 <div class="space-y-1.5">
-                  <h6 class="text-xs font-bold text-text-light mb-1.5">Duties:</h6>
+                  <h6 class="text-xs font-bold text-text-light mb-1.5">{{ t('academy.officers.duties') }}</h6>
                   <ul class="text-xs text-text-muted space-y-1">
                     <li v-for="(duty, dutyIndex) in officer.duties" :key="dutyIndex" class="flex items-start">
                       <span class="text-paladin-gold mr-1.5 mt-0.5 text-[10px]">•</span>
@@ -179,96 +176,101 @@
 </template>
 
 <script setup lang="ts">
-const academyOfficers = [
+import { computed } from "vue";
+import { useI18n } from "@/composables/useI18n";
+
+const { t } = useI18n();
+
+const academyOfficers = computed(() => [
   {
     name: "Mentor",
-    role: "Training Officer",
+    role: t.value('academy.officer.mentor.role'),
     duties: [
-      "Conducts training sessions",
-      "Develops skill programs",
-      "Guides new members",
-      "Assesses progress",
-      "Prepares for advancement",
+      t.value('academy.officer.mentor.duty1'),
+      t.value('academy.officer.mentor.duty2'),
+      t.value('academy.officer.mentor.duty3'),
+      t.value('academy.officer.mentor.duty4'),
+      t.value('academy.officer.mentor.duty5'),
     ],
   },
   {
     name: "Sage",
-    role: "Education Officer",
+    role: t.value('academy.officer.sage.role'),
     duties: [
-      "Teaches game mechanics",
-      "Shares strategic knowledge",
-      "Provides learning resources",
-      "Answers member questions",
-      "Creates training materials",
+      t.value('academy.officer.sage.duty1'),
+      t.value('academy.officer.sage.duty2'),
+      t.value('academy.officer.sage.duty3'),
+      t.value('academy.officer.sage.duty4'),
+      t.value('academy.officer.sage.duty5'),
     ],
   },
   {
     name: "Guardian",
-    role: "Protection Officer",
+    role: t.value('academy.officer.guardian.role'),
     duties: [
-      "Protects Academy members",
-      "Monitors member safety",
-      "Handles security matters",
-      "Responds to threats",
-      "Ensures safe environment",
+      t.value('academy.officer.guardian.duty1'),
+      t.value('academy.officer.guardian.duty2'),
+      t.value('academy.officer.guardian.duty3'),
+      t.value('academy.officer.guardian.duty4'),
+      t.value('academy.officer.guardian.duty5'),
     ],
   },
   {
     name: "Coordinator",
-    role: "Activity Officer",
+    role: t.value('academy.officer.coordinator.role'),
     duties: [
-      "Organizes Academy events",
-      "Coordinates activities",
-      "Manages participation",
-      "Tracks member engagement",
-      "Plans social events",
+      t.value('academy.officer.coordinator.duty1'),
+      t.value('academy.officer.coordinator.duty2'),
+      t.value('academy.officer.coordinator.duty3'),
+      t.value('academy.officer.coordinator.duty4'),
+      t.value('academy.officer.coordinator.duty5'),
     ],
   },
   {
     name: "Recruiter",
-    role: "Recruitment Officer",
+    role: t.value('academy.officer.recruiter.role'),
     duties: [
-      "Screens new applicants",
-      "Onboards new members",
-      "Maintains member records",
-      "Evaluates candidates",
-      "Manages applications",
+      t.value('academy.officer.recruiter.duty1'),
+      t.value('academy.officer.recruiter.duty2'),
+      t.value('academy.officer.recruiter.duty3'),
+      t.value('academy.officer.recruiter.duty4'),
+      t.value('academy.officer.recruiter.duty5'),
     ],
   },
   {
     name: "Advisor",
-    role: "Guidance Officer",
+    role: t.value('academy.officer.advisor.role'),
     duties: [
-      "Provides member guidance",
-      "Offers strategic advice",
-      "Helps with decisions",
-      "Supports member growth",
-      "Mediates conflicts",
+      t.value('academy.officer.advisor.duty1'),
+      t.value('academy.officer.advisor.duty2'),
+      t.value('academy.officer.advisor.duty3'),
+      t.value('academy.officer.advisor.duty4'),
+      t.value('academy.officer.advisor.duty5'),
     ],
   },
   {
     name: "Monitor",
-    role: "Progress Officer",
+    role: t.value('academy.officer.monitor.role'),
     duties: [
-      "Tracks member progress",
-      "Monitors development",
-      "Reports to leadership",
-      "Identifies improvements",
-      "Evaluates readiness",
+      t.value('academy.officer.monitor.duty1'),
+      t.value('academy.officer.monitor.duty2'),
+      t.value('academy.officer.monitor.duty3'),
+      t.value('academy.officer.monitor.duty4'),
+      t.value('academy.officer.monitor.duty5'),
     ],
   },
   {
     name: "Support",
-    role: "Support Officer",
+    role: t.value('academy.officer.support.role'),
     duties: [
-      "Assists members daily",
-      "Provides help and support",
-      "Addresses member needs",
-      "Ensures member welfare",
-      "Maintains communication",
+      t.value('academy.officer.support.duty1'),
+      t.value('academy.officer.support.duty2'),
+      t.value('academy.officer.support.duty3'),
+      t.value('academy.officer.support.duty4'),
+      t.value('academy.officer.support.duty5'),
     ],
   },
-];
+]);
 </script>
 
 <style scoped>

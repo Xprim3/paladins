@@ -80,7 +80,7 @@
             text-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
           "
         >
-          The Strongest Family in the Kingdom
+          {{ t('hero.subtitle') }}
         </p>
 
         <!-- Description -->
@@ -88,10 +88,9 @@
           class="text-sm sm:text-base md:text-lg lg:text-xl text-text-muted max-w-3xl mx-auto mb-8 sm:mb-10 md:mb-12 leading-relaxed transform-gpu px-4"
           style="transform: translateZ(20px)"
         >
-          Join an elite alliance of warriors dedicated to honor, strength, and
-          unity.
-          <span class="text-paladin-gold">Dominate the battlefield</span> and
-          build the most powerful family network.
+          {{ t('hero.description') }}
+          <span class="text-paladin-gold">{{ t('hero.description.highlight') }}</span>
+          {{ t('hero.description.end') }}
         </p>
 
         <!-- 3D CTA Buttons -->
@@ -105,7 +104,7 @@
           >
             <span
               class="relative z-10"
-              >Join Our Family</span
+              >{{ t('hero.button.join') }}</span
             >
             <div
               class="absolute inset-0 bg-gradient-to-r from-blood-red-light via-blood-red to-blood-red-dark opacity-0 group-hover:opacity-100"
@@ -119,7 +118,7 @@
             href="#about"
             class="group relative inline-flex items-center justify-center w-full sm:w-auto px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 bg-dark-surface/80 backdrop-blur-md border-2 border-paladin-gold text-paladin-gold font-bold rounded-xl text-base sm:text-lg md:text-xl hover:bg-paladin-gold hover:text-dark-bg shadow-2xl shadow-paladin-gold/30 active:scale-100"
           >
-            <span class="relative z-10">Learn More</span>
+            <span class="relative z-10">{{ t('hero.button.learn') }}</span>
           </a>
         </div>
       </div>
@@ -147,6 +146,9 @@
 import { onMounted } from "vue";
 import { smoothScrollTo } from "@/utils";
 import Logo from "@/components/ui/Logo.vue";
+import { useI18n } from "@/composables/useI18n";
+
+const { t } = useI18n();
 
 onMounted(() => {
   // Add smooth scroll to CTA buttons

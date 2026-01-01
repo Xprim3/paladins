@@ -17,17 +17,17 @@
             <Logo />
           </div>
           <p class="text-sm sm:text-base text-text-muted mb-4 leading-relaxed">
-            The Strongest Family in the Kingdom. Join us and become part of a true brotherhood bound by honor, loyalty, and unbreakable unity.
+            {{ t('footer.brand.description') }}
           </p>
           <p class="text-xs sm:text-sm text-text-muted italic">
-            "In Blood Paladins, we don't just fight together. We die for each other."
+            "{{ t('footer.brand.quote') }}"
           </p>
         </div>
 
         <!-- Quick Links -->
         <div>
           <h4 class="text-lg sm:text-xl font-bold text-paladin-gold mb-4 sm:mb-6 text-center md:text-left">
-            Quick Links
+            {{ t('footer.links.title') }}
           </h4>
           <ul class="space-y-2 sm:space-y-3 text-center md:text-left">
             <li>
@@ -36,7 +36,7 @@
                 class="text-sm sm:text-base text-text-muted hover:text-paladin-gold transition-colors duration-300"
                 @click="handleNavClick('#about', $event)"
               >
-                About Us
+                {{ t('footer.links.about') }}
               </a>
             </li>
             <li>
@@ -45,7 +45,7 @@
                 class="text-sm sm:text-base text-text-muted hover:text-paladin-gold transition-colors duration-300"
                 @click="handleNavClick('#main-alliance', $event)"
               >
-                Blood Paladins
+                {{ t('footer.links.paladins') }}
               </a>
             </li>
             <li>
@@ -54,7 +54,7 @@
                 class="text-sm sm:text-base text-text-muted hover:text-paladin-gold transition-colors duration-300"
                 @click="handleNavClick('#academy', $event)"
               >
-                Academy
+                {{ t('footer.links.academy') }}
               </a>
             </li>
             <li>
@@ -63,7 +63,7 @@
                 class="text-sm sm:text-base text-text-muted hover:text-paladin-gold transition-colors duration-300"
                 @click="handleNavClick('#farms', $event)"
               >
-                Farm Alliances
+                {{ t('footer.links.farms') }}
               </a>
             </li>
             <li>
@@ -72,7 +72,7 @@
                 class="text-sm sm:text-base text-text-muted hover:text-paladin-gold transition-colors duration-300"
                 @click="handleNavClick('#kingdom', $event)"
               >
-                Kingdom
+                {{ t('footer.links.kingdom') }}
               </a>
             </li>
             <li>
@@ -81,7 +81,7 @@
                 class="text-sm sm:text-base text-paladin-gold hover:text-paladin-gold-light transition-colors duration-300 font-semibold"
                 @click="handleNavClick('#join', $event)"
               >
-                Join Us
+                {{ t('footer.links.join') }}
               </a>
             </li>
           </ul>
@@ -90,24 +90,24 @@
         <!-- Alliances -->
         <div>
           <h4 class="text-lg sm:text-xl font-bold text-paladin-gold mb-4 sm:mb-6 text-center md:text-left">
-            Our Alliances
+            {{ t('footer.alliances.title') }}
           </h4>
           <ul class="space-y-2 sm:space-y-3 text-center md:text-left">
             <li>
-              <span class="text-sm sm:text-base text-text-muted">Blood Paladins</span>
-              <span class="text-xs text-text-muted/70 ml-2">(Main)</span>
+              <span class="text-sm sm:text-base text-text-muted">{{ t('join.main.title') }}</span>
+              <span class="text-xs text-text-muted/70 ml-2">{{ t('footer.alliances.main') }}</span>
             </li>
             <li>
-              <span class="text-sm sm:text-base text-text-muted">Paladins Academy</span>
+              <span class="text-sm sm:text-base text-text-muted">{{ t('join.academy.title') }}</span>
             </li>
             <li>
-              <span class="text-sm sm:text-base text-text-muted">Paladins Farm1</span>
+              <span class="text-sm sm:text-base text-text-muted">{{ t('farms.farm1.name') }}</span>
             </li>
             <li>
-              <span class="text-sm sm:text-base text-text-muted">Paladins Farm2</span>
+              <span class="text-sm sm:text-base text-text-muted">{{ t('farms.farm2.name') }}</span>
             </li>
             <li>
-              <span class="text-sm sm:text-base text-text-muted">Paladins Farm3</span>
+              <span class="text-sm sm:text-base text-text-muted">{{ t('farms.farm3.name') }}</span>
             </li>
           </ul>
         </div>
@@ -115,7 +115,7 @@
         <!-- Social & Contact -->
         <div>
           <h4 class="text-lg sm:text-xl font-bold text-paladin-gold mb-4 sm:mb-6 text-center md:text-left">
-            Connect With Us
+            {{ t('footer.social.title') }}
           </h4>
           <div class="space-y-3 sm:space-y-4">
             <!-- Discord -->
@@ -138,7 +138,7 @@
                   />
                 </svg>
               </div>
-              <span>Discord</span>
+              <span>{{ t('footer.social.discord') }}</span>
             </a>
             <!-- Telegram -->
             <a
@@ -160,7 +160,7 @@
                   />
                 </svg>
               </div>
-              <span>Telegram</span>
+              <span>{{ t('footer.social.telegram') }}</span>
             </a>
           </div>
         </div>
@@ -170,10 +170,10 @@
       <div class="border-t-2 border-dark-border pt-6 sm:pt-8 mt-8 sm:mt-12">
         <div class="flex flex-col md:flex-row items-center justify-between gap-4">
           <p class="text-xs sm:text-sm text-text-muted text-center md:text-left">
-            &copy; {{ currentYear }} Blood Paladins. All rights reserved.
+            &copy; {{ currentYear }} {{ t('footer.copyright') }}
           </p>
           <p class="text-xs sm:text-sm text-text-muted text-center md:text-right">
-            Built with honor, loyalty, and unity.
+            {{ t('footer.built') }}
           </p>
         </div>
       </div>
@@ -185,7 +185,9 @@
 import { computed } from 'vue'
 import { smoothScrollTo } from '@/utils'
 import Logo from '@/components/ui/Logo.vue'
+import { useI18n } from '@/composables/useI18n'
 
+const { t } = useI18n()
 const currentYear = computed(() => new Date().getFullYear())
 
 const handleNavClick = (href: string, event: Event) => {
